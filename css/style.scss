@@ -1,36 +1,38 @@
 // Variables
-$bg-purple      : #D2C6E0;
-$pink           : #F1EEF6;
-$black          : #1A1A1A;
-$gray           : #4D4D4D;
+$green          : #00653b;
+$light-green    : #ddeac6;
+$gray           : #333333;
 $tabletWidth    : 768px;
 
 // Msc
-.bg-pink{background-color: $pink;}
-.bg-purple{background-color: $bg-purple;}
-.bg-black{background-color: $black;}
+.bg-green{background-color: $green;}
+.bg-light-green{background-color: $light-green;}
+.bg-gray{background-color: $gray;color:white;}
+.bg-white{background-color: white;}
+
+.text-green{color:$green;}
+
 
 //Fonts
 @font-face {
-    font-family: infotext;
-    src: url(fonts/infotext-normal.wof);
-    src: url(fonts/infotext-normal.ttf);
+    font-family: Akkurat;
+    src: url(fonts/Akkurat-Normal.otf);
 }
 
 @font-face {
-    font-family: infotext;
-    src: url(fonts/infotext-bold.woff);
-    src: url(fonts/infotext-bold.ttf);
+    font-family: Akkurat;
+    src: url(fonts/Akkurat-Bold.ttf);
     font-weight: bold;
 }
 
 body{
-    font-family: infotext;
-    font-size: 17px;
-    line-height: 1.2;
-    overflow-x: hidden;
+    font-family: Akkurat;
+    // font-size: 17px;
 }
 p{margin:0;}
+.row{
+    padding: 20px 0;
+}
 
 // Site centers on page above 960px
 .limit, .navbar .container{
@@ -40,47 +42,40 @@ p{margin:0;}
 
 // Navbar styles
 .navbar{
-    color: #989898;
+    border: 1px solid black;
+    margin-bottom: 0px;
     padding-top: 8px;
     padding-bottom: 8px;
-    margin-bottom: 0px;
     min-height: 48px;
-    @media (min-width: $tabletWidth){
-        padding-top: 20px;
-        padding-bottom: 11px;
-    }
+    text-align: center;
     .container{
-        // Keep flux logo on the left 
+        // For logo 
         @media (min-width: $tabletWidth){
             width: 100%;
         }
     }
+    @media (min-width: $tabletWidth){
+        padding-top: 20px;
+        padding-bottom: 11px;
+    }
+}
+.navbar-header-me{
+    // border: 1px solid red;
 }
 // Navbar Logo
-.navbar-brand{
+.navbar-brand-me{
+    // border: 1px solid black;
+    display: block;
     padding-top: 0;
     padding-bottom: 0;
-    height: 31px;
-    img, .icon{
-        float: left;
-    }
-    // Flux Big Data Systems text
-    strong{
-        float: left;
-        display: none;
-        margin: 7px 0 0 44px;
-        font-size: 15px;
-        @media (min-width: 860px){
-            display: inline;
-        }
-    }
+    // height: 31px;
 }
 // Hamburger menu
 .navbar-toggle{
     height: 31px;
     padding: 2px;
     margin: 0 40px 0 0;
-    border: none;
+    // border: none;
 }
 .navbar-toggle .icon-bar {
     width: 44px;
@@ -88,57 +83,63 @@ p{margin:0;}
     margin-bottom: 10px;
 }
 .navbar-collapse{
+    // border: 1px solid black;
     margin-top: 8px;
 }
 .navbar-nav{
-    // Keep links off right side
-    margin-right: 150px;
+    // border: 1px solid blue;
+    float: none;
 }
-.nav>li>a{
-    // Control spacing between words
-    @media (min-width: $tabletWidth){
-        padding:0 7px 0 7px;
-        font-size: 14px;
-    }
-}
-
-//Contact info under nav
-.top-contact{
-    height: 27px;
-    margin-top: 48px;
-    padding-top: 5px;
-    font-size: 13px;
-    color: white;
-    background-color: $gray;
-    @media (min-width: $tabletWidth){
-        height: 30px;
-        margin-top: 61px;
-        padding-top: 8px;
-        font-size: 14px;
+.nav>li{
+    float: none;
+    display: inline-block;
+    a{
+        // border: 1px solid yellow;
+        color: white;
+        &:hover, &:focus{
+            background-color: transparent;
+            color: gray;
+        }
+        // Control spacing between words
+        @media (min-width: $tabletWidth){
+            padding:0 7px 0 7px;
+            font-size: 14px;
+        }
     }
 }
 
 // Content
-.flux-banner{
+.bg-field{
     height: 187px;
-    background: black url('../images/main.jpg') no-repeat;
+    background: black url('../images/1.jpg') no-repeat;
     background-size: 100% auto;
     background-position: center top;
-    letter-spacing: 1.5px;
+    // text-align: center;
     strong{
-        display: block;
-        margin-top: 28px;
-        font-size: 20px;
+        font-size: 31px;
         color: white;
     }
     @media (min-width: $tabletWidth){
         height: 520px;
-        background-size: 100% auto;
         strong{
-            margin-top: 95px;
-            font-size: 33px;            
+            font-size: 47px;            
         }
     }
+}
+.bg-yard{
+    height: 450px;
+    background: black url('../images/2.jpg') no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    color: white;
+}
+.bg-tramlines{
+    height: 537px;
+    background: black url('../images/3.jpg') no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    
+    color: white;
 }
 .heading{
     margin-top: 27px;
@@ -204,7 +205,7 @@ p{margin:0;}
     font-size: 17px;
     padding-bottom: 7px;
     hr{
-        border-top: 1px solid $gray;
+        // border-top: 1px solid $gray;
         margin-top: 17px;
         margin-bottom: 17px;
     }
@@ -296,7 +297,7 @@ p{margin:0;}
     hr{
         margin-top: 15px;
         margin-bottom: 6px;
-        border-top: 1px solid $gray;
+        // border-top: 1px solid $gray;
     }
     p{
         margin-top: 30px;
