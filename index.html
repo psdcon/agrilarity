@@ -29,7 +29,7 @@
     </head>
     <body>
 
-        <!-- <img src="Designs/full.png" style="position:absolute;left:70%;"></div> -->
+        <!-- <img src="Designs/full.png" style="position:absolute;left:0px;z-index:;"> -->
 
         <!-- Fixed navbar -->
         <div class="navbar navbar-fixed-top bg-green" role="navigation">
@@ -61,98 +61,116 @@
         </div>
 
         <div id="home" class="container-fluid" style="padding:0;">
-            <div class="spacing" style="height:70px"></div>
             
             <div class="bg-field" >
-                <div class="row limit" style="height:100%;display: table;">
-                    <strong style="display: table-cell; vertical-align: middle;">
+                <div class="row limit">
+                    <strong>
                         Digitising Agriculture
                     </strong>
                 </div>
             </div>
             
             <div class="row limit">
-                <div class="col-xs-12 text-green">
-                    <strong style="display:block;">Agriculture is the single greatest driver of climate change on the planet. </strong>
-                    We believe that by digitising today's agricultural practices and then using the data to create innovations through AI analysis and automation, we can create a new, sustainable agricultural paradigm. 
+                <div id="agriculture-text" class="col-xs-12 text-green">
+                    <strong>Agriculture is the single greatest driver of climate change on the planet. </strong>
+                    <p>We believe that by digitising today's agricultural practices and then using the data to create innovations through AI analysis and automation, we can create a new, sustainable agricultural paradigm. </p>
                 </div>
             </div>
-            <div class="bg-light-green">
+            <div id="about" class="bg-light-green">
                 <div class="row limit">
-                    <div class="col-sm-6">Agrilarity - Digitising agriculture and beyond.</div>
+                    <p class="col-sm-6 text-green">Agrilarity - Digitising agriculture and beyond.</p>
 
-                    <div class="col-sm-6">The Green Revolution agricultural techniques popularised by Norman Borlaug in the 50's and 60's were absolutely necessary to provide food for a rapidly increasing global population. This system was so successful that it is still the globally dominant practice for growing crops.</div>
+                    <p class="col-sm-6">The Green Revolution agricultural techniques popularised by Norman Borlaug in the 50's and 60's were absolutely necessary to provide food for a rapidly increasing global population. This system was so successful that it is still the globally dominant practice for growing crops.</p>
+                </div>
 
-                    <div class="row bg-white">
-                        <div class="col-sm-6">
-                            <strong>Undernourished in developing world population, 1961-71 to 2010 (percent)</strong> <br>
+                <div id="white1" class="row limit bg-white">
+                    <div class="col-sm-6">
+                        <strong class="text-green">Undernourished in developing world population, 1961-71 to 2010 (percent)</strong>
 
-                            Green Revolution agriculture effectively outsourced seed, soil, and pest management historically done on farm to companies that became today's global agricultural giants.
-                        </div>
-                        <div class="col-sm-6">
-                            graph
-                        </div>
+                        <p>Green Revolution agriculture effectively outsourced seed, soil, and pest management historically done on farm to companies that became today's global agricultural giants.</p>
                     </div>
-                    <div class="row bg-white">
-                        <div class="col-sm-6">
-                            <strong>Indicators of global crop production intensification, 1961-2007</strong> Index (1961 = 100) <br>
-
-                            As the chart demonstrates, our ability to replace soil fertility with artificial inputs is diminishing. We need to change our farming habits significantly if we are to feed 9bn people by 2050.
-                        </div>
-                        <div class="col-sm-6">
-                            graph
-                        </div>
+                    <div class="col-sm-6">
+                        <img src="images/graph1.png" alt="">
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            We believe that the next agricultural revolution will be digital & automated.
-                        </div>
-                        <div class="col-sm-6">
-                            Current agricultural measurement is crude and point in time, it needs to be accurate and real time if we are to affect revolutionary change.
+                </div>
+                <div id="white2" class="row limit bg-white">
+                    <div class="col-sm-6">
+                        <strong class="text-green">Indicators of global crop production intensification, 1961-2007 <span class="no-bold">Index (1961 = 100)</span></strong>
 
-                            Through their role on Singularity University's Exponential Advisory Board our founders realised that the technologies required to begin the next agricultural revolution are available today, just spread across many different industries and disciplines.
+                        <p>As the chart demonstrates, our ability to replace soil fertility with artificial inputs is diminishing. We need to change our farming habits significantly if we are to feed 9bn people by 2050.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="images/graph2.png" alt="">                            
+                    </div>
+                </div>
+                <div id="we-believe-text" class="row limit">
+                    <div class="col-sm-6">
+                        <p class="text-green">We believe that the next agricultural revolution will be digital & automated.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Current agricultural measurement is crude and point in time, it needs to be accurate and real time if we are to affect revolutionary change.</p>
 
-                            Agrilarity has been founded to promote and implement increased digitisation & automation of agricultural processes that can reduce cost, waste, and inefficiencies.
-                        </div>
+                        <p>Through their role on Singularity University's Exponential Advisory Board our founders realised that the technologies required to begin the next agricultural revolution are available today, just spread across many different industries and disciplines.</p>
+
+                        <p>Agrilarity has been founded to promote and implement increased digitisation & automation of agricultural processes that can reduce cost, waste, and inefficiencies.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-yard" >
-                <div class="row limit hidden-xs" style="height:100%;display: table;">
-                    <p style="display: table-cell; vertical-align: middle;">
+            <div class="bg-yard">
+                <div class="row limit hidden-xs">
+                    <p>
+                        We believe that systematic agricultural digitisation will enable us to ultimately discover new, ecologically friendly ways of producing the food we need to feed the planet.
+                    </p>
+                </div>
+            </div>
+            <div id="systematic" class="row limit visible-xs-block">
+                <div class="col-sm-6">
+                    <p class="text-green">
                         We believe that systematic agricultural digitisation will enable us to ultimately discover new, ecologically friendly ways of producing the food we need to feed the planet.
                     </p>
                 </div>
             </div>
 
-            <div class="row limit bg-light-green">
-                <div class="col-sm-6">
-                    Current Agrilarity Projects
-                    
-                    list items
+            <div class="bg-light-green text-green">
+                <div id="projects" class="row limit">
+                    <div class="col-sm-12">
+                        <p class="projects-heading">Current Agrilarity Projects</p>
+                    </div>
+                    <div class="col-sm-6">                    
+                        <ul>
+                            <li>FLUX BDS ≥</li>
+                            <li>INSECT PROTEIN ≥</li>
+                            <li>AGRILARITY QS ≥</li>
+                            <li>AGRICULTURAL AUTOMATION ≥</li>
+                            <li>MICROBIAL SOLUTIONS ≥</li>
+                        </ul>
+                    </div>
+                
+                    <div class="col-sm-6">
+                        <p>Many countries do not produce enough protein to supply their current agricultural activities. For example, Ireland imports 2.5m tonnes of soy protein per annum. What if this could be replaced by insect protein produced using domestic waste? Insect protein is also a more bio-suitable feed for poultry and pigs than soy, reducing the amount of micro-nutrient feed inputs required.</p>
+                    </div>
                 </div>
-
-                <div class="col-sm-6">Many countries do not produce enough protein to supply their current agricultural activities. For example, Ireland imports 2.5m tonnes of soy protein per annum. What if this could be replaced by insect protein produced using domestic waste? Insect protein is also a more bio-suitable feed for poultry and pigs than soy, reducing the amount of micro-nutrient feed inputs required.</div>
             </div>
             
             <div id="joinus" class="bg-tramlines">
-                <div class="row limit" style="height:100%;width:100%;display: table;">
-                    <p style="display: table-cell; text-align:left; vertical-align: bottom;">
-                        Join us
-                    </p>
+                <div class="row limit">
+                    <p>Join us</p>
                 </div>
             </div>
             
-            <div class="bg-light-green">
-                <div class="row limit">
-                    <div class="col-sm-6">We want curious, open-minded people who are passionate about improving the world around them.</div>
+            
+            <div id="wewant" class="row limit text-green">
+                <div class="col-sm-6">
+                    <p class="heading">We want curious, open-minded people who are passionate about improving the world around them.</p>
+                </div>
 
-                    <div class="col-sm-6">If you are an innovative thinker who enjoys solving hard problems please send us an inquiry.
-                    Contact us now ≥
+                <div class="col-sm-6">
+                    <p class="text"><strong>If you are an innovative thinker who enjoys solving hard problems please send us an inquiry.</strong><br>
+                    Contact us now ≥</p>
 
-                    If you have an innovative agricultural project and would like to engage or brainstorm with us please get in contact.
-                    Contact us now ≥ </div>
+                    <p class="text"><strong>If you have an innovative agricultural project and would like to engage or brainstorm with us please get in contact.</strong><br>
+                    Contact us now ≥</p>
                 </div>
             </div>
 
@@ -161,14 +179,15 @@
                     <div class="col-sm-12">Media</div>
                 </div>
             </div>
-            <div id="contact" class="row limit">
-                <div class="col-sm-6">Contact</div>
-                <div class="col-sm-6">info@agrilarity ≥</div>
+            
+            <div id="contact" class="row limit text-green">
+                <div class="col-sm-6"><p class="heading">Contact</p></div>
+                <div class="col-sm-6"><p>info@agrilarity ≥</p></div>
             </div>
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="bootstrap/js/jquery1.11.1.js"></script>
+        <script src="bootstrap/js/jquery.js"></script>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <!-- Latest compiled and minified JavaScript -->
@@ -194,7 +213,7 @@
                     $(this).click(function(event) {
                       var targetOffset = $target.offset().top;
                       event.preventDefault();
-                      $('html, body').animate({scrollTop: targetOffset-50}, 800, function() {
+                      $('html, body').animate({scrollTop: targetOffset-93}, 800, function() {
                         // location.hash = target;
                       });
                     });
@@ -202,14 +221,6 @@
                 }
               });
             });            
-        </script>
-
-        <script src="src/jquery.touchslider.min.js"></script>
-        <script>
-            jQuery(function($) {
-                // if(window.innerWidth < 768)
-                    $(".touchslider").touchSlider({/*options*/});
-            });
         </script>
     </body>
 </html>
