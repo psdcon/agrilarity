@@ -276,6 +276,9 @@ p{margin:0;}
         height: 341px;
         background-size: auto 100%;
     }
+    @media (min-width: 970px){
+        background-size: 102% auto;
+    }
 }
 #systematic{
     margin-top: 10px;
