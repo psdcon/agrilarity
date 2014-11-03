@@ -322,8 +322,8 @@ p {
 .bg-yard {
   height: 164px;
   background: url("../images/2.jpg") no-repeat;
-  background-size: 150% auto;
-  background-position: center top;
+  background-size: auto 100%;
+  background-position: center bottom;
   color: white;
 }
 /* line 254, style.scss */
@@ -339,16 +339,27 @@ p {
   font-size: 22px;
   text-align: center;
 }
+@media (min-width: 485px) {
+  /* line 248, style.scss */
+  .bg-yard {
+    background-size: 100% auto;
+  }
+}
 @media (min-width: 768px) {
   /* line 248, style.scss */
   .bg-yard {
     height: 341px;
-    background-size: 129% auto;
-    background-position: center center;
+    background-size: auto 100%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 248, style.scss */
+  .bg-yard {
+    background-size: 102% auto;
   }
 }
 
-/* line 271, style.scss */
+/* line 276, style.scss */
 #systematic {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -356,59 +367,59 @@ p {
   font-size: 18px;
 }
 
-/* line 278, style.scss */
+/* line 283, style.scss */
 #projects {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-/* line 281, style.scss */
+/* line 286, style.scss */
 #projects .projects-heading {
   margin-bottom: 20px;
   font-size: 19px;
 }
-/* line 285, style.scss */
+/* line 290, style.scss */
 #projects ul {
   padding-left: 0;
   padding-bottom: 10px;
   list-style: none;
   font-weight: bold;
 }
-/* line 291, style.scss */
+/* line 296, style.scss */
 #projects li {
   padding-bottom: 21px;
   border-top: 2px solid #479376;
   color: #479376;
 }
-/* line 296, style.scss */
+/* line 301, style.scss */
 #projects li:hover, #projects li:active {
   border-top: 2px solid #00653b;
   color: #00653b;
 }
 @media (min-width: 768px) {
-  /* line 278, style.scss */
+  /* line 283, style.scss */
   #projects {
     padding-top: 33px;
     padding-bottom: 17px;
   }
-  /* line 304, style.scss */
+  /* line 309, style.scss */
   #projects .projects-heading {
     margin-bottom: 43px;
     font-size: 29px;
   }
-  /* line 308, style.scss */
+  /* line 313, style.scss */
   #projects li {
     border-top: 1px solid #479376;
     padding-top: 7px;
     padding-bottom: 19px;
     font-size: 17px;
   }
-  /* line 314, style.scss */
+  /* line 319, style.scss */
   #projects li:hover, #projects li:active {
     border-top: 1px solid #00653b;
   }
 }
 
-/* line 321, style.scss */
+/* line 326, style.scss */
 .bg-tramlines {
   height: 158px;
   background: url("../images/3.jpg") no-repeat;
@@ -416,53 +427,53 @@ p {
   background-position: center bottom;
   color: white;
 }
-/* line 327, style.scss */
+/* line 332, style.scss */
 .bg-tramlines .row {
   display: table;
   padding-left: 10px;
   width: 100%;
   height: 98%;
 }
-/* line 333, style.scss */
+/* line 338, style.scss */
 .bg-tramlines p {
   display: table-cell;
   vertical-align: bottom;
 }
 @media (min-width: 768px) {
-  /* line 321, style.scss */
+  /* line 326, style.scss */
   .bg-tramlines {
     height: 340px;
     background-position: center center;
     font-size: 27px;
   }
-  /* line 341, style.scss */
+  /* line 346, style.scss */
   .bg-tramlines .row {
     height: 93%;
     padding-left: 45px;
   }
 }
 
-/* line 349, style.scss */
+/* line 354, style.scss */
 #wewant p {
   margin-top: 11px;
   margin-bottom: 21px;
 }
-/* line 353, style.scss */
+/* line 358, style.scss */
 #wewant a.no-style {
   color: inherit;
 }
 @media (min-width: 768px) {
-  /* line 348, style.scss */
+  /* line 353, style.scss */
   #wewant {
     margin-top: 4px;
   }
-  /* line 358, style.scss */
+  /* line 363, style.scss */
   #wewant .heading {
     font-size: 23px;
     padding-top: 10px;
     padding-right: 100px;
   }
-  /* line 363, style.scss */
+  /* line 368, style.scss */
   #wewant .text {
     border-top: 1px solid #00653b;
     padding-top: 6px;
@@ -471,14 +482,14 @@ p {
   }
 }
 
-/* line 372, style.scss */
+/* line 377, style.scss */
 #media {
   height: 234px;
   padding-top: 12px;
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 372, style.scss */
+  /* line 377, style.scss */
   #media {
     margin-top: 30px;
     padding-top: 20px;
@@ -486,25 +497,25 @@ p {
   }
 }
 
-/* line 383, style.scss */
+/* line 388, style.scss */
 #contact {
   margin-top: 5px;
 }
-/* line 385, style.scss */
+/* line 390, style.scss */
 #contact .heading {
   font-size: 30px;
 }
-/* line 388, style.scss */
+/* line 393, style.scss */
 #contact p {
   margin-top: 8px;
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 383, style.scss */
+  /* line 388, style.scss */
   #contact {
     margin-top: 15px;
   }
-  /* line 394, style.scss */
+  /* line 399, style.scss */
   #contact p {
     font-size: 22px;
   }

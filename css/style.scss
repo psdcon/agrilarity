@@ -248,8 +248,8 @@ p{margin:0;}
 .bg-yard{
     height: 164px;
     background: url('../images/2.jpg') no-repeat;
-    background-size: 150% auto;
-    background-position: center top;
+    background-size: auto 100%;
+    background-position: center bottom;
     color: white;
     .row{
         display: table;
@@ -262,10 +262,15 @@ p{margin:0;}
         font-size: 22px;
         text-align: center;
     }
+    @media (min-width: 485px){
+        background-size: 100% auto;        
+    }
     @media (min-width: $tabletWidth){
         height: 341px;
-        background-size: 129% auto;
-        background-position: center center;
+        background-size: auto 100%;
+    }
+    @media (min-width: $tabletWidth){
+        background-size: 102% auto;
     }
 }
 #systematic{
