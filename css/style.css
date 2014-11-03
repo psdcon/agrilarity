@@ -462,7 +462,7 @@ p {
   /* line 353, style.scss */
   .bg-tramlines .row {
     height: 93%;
-    padding-left: 45px;
+    padding-left: 40px;
   }
 }
 
@@ -512,13 +512,14 @@ p {
 
 /* line 395, style.scss */
 #contact {
+  height: 150px;
   margin-top: 5px;
 }
-/* line 397, style.scss */
+/* line 398, style.scss */
 #contact .heading {
   font-size: 30px;
 }
-/* line 400, style.scss */
+/* line 401, style.scss */
 #contact p {
   margin-top: 8px;
   font-size: 20px;
@@ -528,7 +529,7 @@ p {
   #contact {
     margin-top: 15px;
   }
-  /* line 406, style.scss */
+  /* line 407, style.scss */
   #contact p {
     font-size: 22px;
   }
