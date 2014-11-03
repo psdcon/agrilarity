@@ -169,12 +169,21 @@ p{margin:0;}
         }
     }
 }
+ .white-padding{
+    padding-left: 7.5px;
+    padding-right: 10px;
+    @media (min-width: $tabletWidth){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+ }
 .bg-white{
-    margin-left: 7.5px;
-    margin-right: 9px;
     padding-top: 15px;
     .col-sm-6{
         padding-left: 7.5px;
+    }
+    .center-img{
+        text-align: center;
     }
     p{
         margin-top: 22px;
@@ -185,8 +194,6 @@ p{margin:0;}
         padding-bottom: 12px;
     }
     @media (min-width: $tabletWidth){
-        margin-left: 20px;
-        margin-right: 20px;
         padding-top: 22px;
         .text-green{
             font-size: 22px;
@@ -268,9 +275,6 @@ p{margin:0;}
     @media (min-width: $tabletWidth){
         height: 341px;
         background-size: auto 100%;
-    }
-    @media (min-width: $tabletWidth){
-        background-size: 102% auto;
     }
 }
 #systematic{

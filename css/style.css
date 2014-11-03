@@ -222,103 +222,116 @@ p {
 }
 
 /* line 172, style.scss */
+.white-padding {
+  padding-left: 7.5px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  /* line 172, style.scss */
+  .white-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* line 180, style.scss */
 .bg-white {
-  margin-left: 7.5px;
-  margin-right: 9px;
   padding-top: 15px;
 }
-/* line 176, style.scss */
+/* line 182, style.scss */
 .bg-white .col-sm-6 {
   padding-left: 7.5px;
 }
-/* line 179, style.scss */
+/* line 185, style.scss */
+.bg-white .center-img {
+  text-align: center;
+}
+/* line 188, style.scss */
 .bg-white p {
   margin-top: 22px;
   padding-bottom: 20px;
 }
-/* line 183, style.scss */
+/* line 192, style.scss */
 .bg-white img {
   max-width: 100%;
   padding-bottom: 12px;
 }
 @media (min-width: 768px) {
-  /* line 172, style.scss */
+  /* line 180, style.scss */
   .bg-white {
-    margin-left: 20px;
-    margin-right: 20px;
     padding-top: 22px;
   }
-  /* line 191, style.scss */
+  /* line 198, style.scss */
   .bg-white .text-green {
     font-size: 22px;
     line-height: 1.3;
   }
-  /* line 195, style.scss */
+  /* line 202, style.scss */
   .bg-white .col-sm-6 {
     padding-left: 0;
   }
-  /* line 198, style.scss */
+  /* line 205, style.scss */
   .bg-white .col-sm-6:first-child {
     padding-right: 125px;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 205, style.scss */
+  /* line 212, style.scss */
   #white1 img {
     padding-top: 12px;
     padding-bottom: 24px;
   }
 }
 
-/* line 211, style.scss */
+/* line 218, style.scss */
 #white2 {
   margin-top: 26px;
 }
 @media (min-width: 768px) {
-  /* line 211, style.scss */
+  /* line 218, style.scss */
   #white2 {
     margin-top: 45px;
   }
-  /* line 215, style.scss */
+  /* line 222, style.scss */
   #white2 img {
     padding-top: 12px;
     padding-bottom: 14px;
   }
-  /* line 219, style.scss */
+  /* line 226, style.scss */
   #white2 .no-bold {
     font-weight: normal;
   }
 }
 
-/* line 226, style.scss */
+/* line 233, style.scss */
 #we-believe-text .text-green {
   font-size: 18px;
 }
-/* line 229, style.scss */
+/* line 236, style.scss */
 #we-believe-text p {
   margin: 20px 0;
 }
-/* line 232, style.scss */
+/* line 239, style.scss */
 #we-believe-text p:last-child {
   margin-bottom: 13px;
 }
 @media (min-width: 768px) {
-  /* line 236, style.scss */
+  /* line 243, style.scss */
   #we-believe-text .text-green {
     font-size: 23px;
   }
-  /* line 239, style.scss */
+  /* line 246, style.scss */
   #we-believe-text p:last-child {
     margin-bottom: 65px;
   }
-  /* line 242, style.scss */
+  /* line 249, style.scss */
   #we-believe-text .col-sm-6:last-child {
     padding-right: 48px;
   }
 }
 
-/* line 248, style.scss */
+/* line 255, style.scss */
 .bg-yard {
   height: 164px;
   background: url("../images/2.jpg") no-repeat;
@@ -326,12 +339,12 @@ p {
   background-position: center bottom;
   color: white;
 }
-/* line 254, style.scss */
+/* line 261, style.scss */
 .bg-yard .row {
   display: table;
   height: 100%;
 }
-/* line 258, style.scss */
+/* line 265, style.scss */
 .bg-yard p {
   display: table-cell;
   padding: 0 70px;
@@ -340,26 +353,20 @@ p {
   text-align: center;
 }
 @media (min-width: 485px) {
-  /* line 248, style.scss */
+  /* line 255, style.scss */
   .bg-yard {
     background-size: 100% auto;
   }
 }
 @media (min-width: 768px) {
-  /* line 248, style.scss */
+  /* line 255, style.scss */
   .bg-yard {
     height: 341px;
     background-size: auto 100%;
   }
 }
-@media (min-width: 768px) {
-  /* line 248, style.scss */
-  .bg-yard {
-    background-size: 102% auto;
-  }
-}
 
-/* line 276, style.scss */
+/* line 280, style.scss */
 #systematic {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -367,59 +374,59 @@ p {
   font-size: 18px;
 }
 
-/* line 283, style.scss */
+/* line 287, style.scss */
 #projects {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-/* line 286, style.scss */
+/* line 290, style.scss */
 #projects .projects-heading {
   margin-bottom: 20px;
   font-size: 19px;
 }
-/* line 290, style.scss */
+/* line 294, style.scss */
 #projects ul {
   padding-left: 0;
   padding-bottom: 10px;
   list-style: none;
   font-weight: bold;
 }
-/* line 296, style.scss */
+/* line 300, style.scss */
 #projects li {
   padding-bottom: 21px;
   border-top: 2px solid #479376;
   color: #479376;
 }
-/* line 301, style.scss */
+/* line 305, style.scss */
 #projects li:hover, #projects li:active {
   border-top: 2px solid #00653b;
   color: #00653b;
 }
 @media (min-width: 768px) {
-  /* line 283, style.scss */
+  /* line 287, style.scss */
   #projects {
     padding-top: 33px;
     padding-bottom: 17px;
   }
-  /* line 309, style.scss */
+  /* line 313, style.scss */
   #projects .projects-heading {
     margin-bottom: 43px;
     font-size: 29px;
   }
-  /* line 313, style.scss */
+  /* line 317, style.scss */
   #projects li {
     border-top: 1px solid #479376;
     padding-top: 7px;
     padding-bottom: 19px;
     font-size: 17px;
   }
-  /* line 319, style.scss */
+  /* line 323, style.scss */
   #projects li:hover, #projects li:active {
     border-top: 1px solid #00653b;
   }
 }
 
-/* line 326, style.scss */
+/* line 330, style.scss */
 .bg-tramlines {
   height: 158px;
   background: url("../images/3.jpg") no-repeat;
@@ -427,53 +434,53 @@ p {
   background-position: center bottom;
   color: white;
 }
-/* line 332, style.scss */
+/* line 336, style.scss */
 .bg-tramlines .row {
   display: table;
   padding-left: 10px;
   width: 100%;
   height: 98%;
 }
-/* line 338, style.scss */
+/* line 342, style.scss */
 .bg-tramlines p {
   display: table-cell;
   vertical-align: bottom;
 }
 @media (min-width: 768px) {
-  /* line 326, style.scss */
+  /* line 330, style.scss */
   .bg-tramlines {
     height: 340px;
     background-position: center center;
     font-size: 27px;
   }
-  /* line 346, style.scss */
+  /* line 350, style.scss */
   .bg-tramlines .row {
     height: 93%;
     padding-left: 45px;
   }
 }
 
-/* line 354, style.scss */
+/* line 358, style.scss */
 #wewant p {
   margin-top: 11px;
   margin-bottom: 21px;
 }
-/* line 358, style.scss */
+/* line 362, style.scss */
 #wewant a.no-style {
   color: inherit;
 }
 @media (min-width: 768px) {
-  /* line 353, style.scss */
+  /* line 357, style.scss */
   #wewant {
     margin-top: 4px;
   }
-  /* line 363, style.scss */
+  /* line 367, style.scss */
   #wewant .heading {
     font-size: 23px;
     padding-top: 10px;
     padding-right: 100px;
   }
-  /* line 368, style.scss */
+  /* line 372, style.scss */
   #wewant .text {
     border-top: 1px solid #00653b;
     padding-top: 6px;
@@ -482,14 +489,14 @@ p {
   }
 }
 
-/* line 377, style.scss */
+/* line 381, style.scss */
 #media {
   height: 234px;
   padding-top: 12px;
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 377, style.scss */
+  /* line 381, style.scss */
   #media {
     margin-top: 30px;
     padding-top: 20px;
@@ -497,25 +504,25 @@ p {
   }
 }
 
-/* line 388, style.scss */
+/* line 392, style.scss */
 #contact {
   margin-top: 5px;
 }
-/* line 390, style.scss */
+/* line 394, style.scss */
 #contact .heading {
   font-size: 30px;
 }
-/* line 393, style.scss */
+/* line 397, style.scss */
 #contact p {
   margin-top: 8px;
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 388, style.scss */
+  /* line 392, style.scss */
   #contact {
     margin-top: 15px;
   }
-  /* line 399, style.scss */
+  /* line 403, style.scss */
   #contact p {
     font-size: 22px;
   }
