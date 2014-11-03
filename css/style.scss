@@ -9,7 +9,7 @@ $tabletWidth    : 768px;
 .bg-green{background-color: $green;}
 .bg-light-green{background-color: $light-green;}
 .bg-gray{background-color: $gray;color:white;}
-.bg-white{background-color: white;margin:0 8px;}
+.bg-white{background-color: white;}
 .text-green{color:$green;}
 
 //Fonts
@@ -36,6 +36,11 @@ p{margin:0;}
     margin: 0 auto;
     // margin:0;
 }
+.limit{
+    @media (min-width: $tabletWidth){
+        padding-left: 35px;
+    }
+}
 
 // Navbar styles
 .navbar{
@@ -50,7 +55,6 @@ p{margin:0;}
     @media (min-width: $tabletWidth){
         text-align: center;
         padding-top: 20px;
-        padding-bottom: 13px;
     }
 }
 // Navbar Logo
@@ -71,11 +75,9 @@ p{margin:0;}
     border: 1px solid rgba(255,255,255,0.5);
 }
 .navbar-collapse{
-    // border: 1px solid black;
     margin-top: 8px;
 }
 .navbar-nav{
-    // border: 1px solid blue;
     float: none;
 }
 .nav>li{
@@ -84,7 +86,6 @@ p{margin:0;}
         display: inline-block;
     }
     a{
-        // border: 1px solid yellow;
         color: white;
         &:hover, &:focus{
             background-color: transparent;
@@ -108,7 +109,7 @@ p{margin:0;}
     margin-top: 39px;
     .row{
         display: table;
-        height:90%;
+        height: 90%;
     }
     strong{
         width: 100%;
@@ -120,8 +121,8 @@ p{margin:0;}
     }
     @media (min-width: $tabletWidth){
         height: 522px;
+        background-size: 104% auto;
         margin-top: 69px;
-        background-size: 104% auto;        
         strong{
             font-size: 48px;            
         }
@@ -134,15 +135,14 @@ p{margin:0;}
     text-align: center;
     line-height: 1.35;
     strong{
-        line-height: 1.2;
         display: block;
         font-size: 20px;
+        line-height: 1.2;
     }
     @media (min-width: $tabletWidth){
         margin-top: 52px;
         font-size: 21px;
         strong{
-            display: block;
             font-size: 24px;
         }
     }
@@ -150,82 +150,71 @@ p{margin:0;}
 
 #about{
     margin-top: 25px;
-    padding-top: 20px 0 0 0;
+    padding: 20px 0 0 0;
     p.text-green{
+        padding-right: 28px;
         padding-bottom: 10px;
         font-size: 19px;
     }
-    &>p:nth-child(2){       
+    .col-sm-offset-1{       
         padding-bottom: 16px;
     }
     @media (min-width: $tabletWidth){
-        border-top: 4px solid gray;
         margin-top: 58px;
-        padding: 44px 0 0 0;
+        padding: 34px 0 0 0;
+        border-top: 4px solid gray;
         p.text-green{
-            padding-bottom: 116px;
+            padding-bottom: 120px;
             font-size: 29px;
         }
     }
 }
 .bg-white{
-    .col-sm-6{
-        padding-left: 6px;
-        padding-right: 10px;
-    }
-    @media (min-width: $tabletWidth){
-        .col-sm-6{
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    }
-}
-#white1{
+    margin-left: 7.5px;
+    margin-right: 9px;
     padding-top: 15px;
+    .col-sm-6{
+        padding-left: 7.5px;
+    }
     p{
         margin-top: 22px;
         padding-bottom: 20px;
     }
     img{
         max-width: 100%;
-        // max-height: 190px;
-        padding-bottom: 10px;
+        padding-bottom: 12px;
     }
     @media (min-width: $tabletWidth){
-        padding-top: 17px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 22px;
         .text-green{
             font-size: 22px;
+            line-height: 1.3;
+        }
+        .col-sm-6{
+            padding-left: 0;
         }
         .col-sm-6:first-child{
-            padding-right:84px;
+            padding-right: 125px;
         }
+    }
+}
+#white1{
+    @media (min-width: $tabletWidth){
         img{
-            padding-bottom: 30px;
+            padding-top: 12px;
+            padding-bottom: 24px;
         }
     }
 }
 #white2{
     margin-top: 26px;
-    padding-top: 16px;
-    p{
-        margin-top: 20px;
-    }
-    img{
-        max-width: 100%;
-        margin-top: 22px;
-        margin-bottom: 3px;
-    }
     @media (min-width: $tabletWidth){
         margin-top: 45px;
-        padding-top: 17px;
-        .text-green{
-            font-size: 22px;
-        }
-        .col-sm-6:first-child{
-            padding-right:84px;
-        }
         img{
-            padding-bottom: 10px;
+            padding-top: 12px;
+            padding-bottom: 14px;
         }
         .no-bold{
             font-weight: normal;
@@ -237,7 +226,9 @@ p{margin:0;}
     .text-green{
         font-size: 18px;
     }
-    p{margin:22px 0;}
+    p{
+        margin: 20px 0;
+    }
     p:last-child{
         margin-bottom: 13px;
     }
@@ -245,29 +236,29 @@ p{margin:0;}
         .text-green{
             font-size: 23px;
         }
-        .col-sm-6:last-child{
-            padding-right: 48px;
-        }
         p:last-child{
             margin-bottom: 65px;
+        }
+        .col-sm-6:last-child{
+            padding-right: 48px;
         }
     }
 }
 
 .bg-yard{
-    height: 162px;
+    height: 164px;
     background: url('../images/2.jpg') no-repeat;
     background-size: 150% auto;
     background-position: center top;
     color: white;
     .row{
         display: table;
-        height:100%;
+        height: 100%;
     }
     p{
         display: table-cell;
-        vertical-align: middle;
         padding: 0 70px;
+        vertical-align: middle;
         font-size: 22px;
         text-align: center;
     }
@@ -279,16 +270,15 @@ p{margin:0;}
 }
 #systematic{
     margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 18px;
 }
 
 #projects{
-    // margin-top: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
     .projects-heading{
-        // margin-top: 10px;
         margin-bottom: 20px;
         font-size: 19px;
     }
@@ -312,13 +302,18 @@ p{margin:0;}
         padding-top: 33px;
         padding-bottom: 17px;
         .projects-heading{
-            font-size: 29px;
             margin-bottom: 43px;
+            font-size: 29px;
         }
         li{
             border-top: 1px solid $faded-green;
-            padding-bottom: 25px;
+            padding-top: 7px;
+            padding-bottom: 19px;
             font-size: 17px;
+
+            &:hover, &:active{
+                border-top: 1px solid $green;
+            }
         }
     }
 }
@@ -331,6 +326,7 @@ p{margin:0;}
     color: white;
     .row{
         display: table;
+        padding-left: 10px;
         width: 100%;
         height: 98%;
     }
@@ -340,12 +336,11 @@ p{margin:0;}
     }
     @media (min-width: $tabletWidth){
         height: 340px;
-        background-size: 100% auto;
         background-position: center center;
         font-size: 27px;
         .row{
-            padding-left: 20px;
             height: 93%;
+            padding-left: 45px;
         }
     }
 }
@@ -355,26 +350,31 @@ p{margin:0;}
         margin-top: 11px;
         margin-bottom: 21px;
     }
+    a.no-style{
+        color: inherit;
+    }
     @media (min-width: $tabletWidth){
-        margin-top: 6px;
+        margin-top: 4px;
         .heading{
-            font-size: 25px;
+            font-size: 23px;
+            padding-top: 10px;
+            padding-right: 100px;
         }
         .text{
             border-top: 1px solid $green;
-            padding-top: 7px;
-            margin-bottom: 12px;
+            padding-top: 6px;
+            margin-bottom: 10px;
             font-size: 17px;
         }
     }
 }
 
 #media{
-    height: 230px;
+    height: 234px;
     padding-top: 12px;
     font-size: 18px;
     @media (min-width: $tabletWidth){
-        margin-top: 24px;
+        margin-top: 30px;
         padding-top: 20px;
         font-size: 30px;
     }
@@ -390,7 +390,7 @@ p{margin:0;}
         font-size: 20px;
     }
     @media (min-width: $tabletWidth){
-        margin-top: 20px;
+        margin-top: 15px;
         p{
             font-size: 22px;
         }

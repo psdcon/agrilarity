@@ -29,7 +29,7 @@
     </head>
     <body>
 
-        <!-- <img src="Designs/full.png" style="position:absolute;left:0px;z-index:;"> -->
+        <!-- <img src="Designs/cmobile.png" style="position:absolute;left:320px;"> -->
 
         <!-- Fixed navbar -->
         <div class="navbar navbar-fixed-top bg-green" role="navigation">
@@ -78,9 +78,9 @@
             </div>
             <div id="about" class="bg-light-green">
                 <div class="row limit">
-                    <p class="col-sm-6 text-green">Agrilarity - Digitising agriculture and beyond.</p>
+                    <p class="col-sm-5 text-green">Agrilarity - Digitising agriculture and beyond.</p>
 
-                    <p class="col-sm-6">The Green Revolution agricultural techniques popularised by Norman Borlaug in the 50's and 60's were absolutely necessary to provide food for a rapidly increasing global population. This system was so successful that it is still the globally dominant practice for growing crops.</p>
+                    <p class="col-sm-offset-1 col-sm-6">The Green Revolution agricultural techniques popularised by Norman Borlaug in the 50's and 60's were absolutely necessary to provide food for a rapidly increasing global population. This system was so successful that it is still the globally dominant practice for growing crops.</p>
                 </div>
 
                 <div id="white1" class="row limit bg-white">
@@ -137,7 +137,7 @@
                     <div class="col-sm-12">
                         <p class="projects-heading">Current Agrilarity Projects</p>
                     </div>
-                    <div class="col-sm-6">                    
+                    <div class="col-sm-5">                    
                         <ul>
                             <li>FLUX BDS ≥</li>
                             <li>INSECT PROTEIN ≥</li>
@@ -147,7 +147,7 @@
                         </ul>
                     </div>
                 
-                    <div class="col-sm-6">
+                    <div class="col-sm-offset-1 col-sm-6">
                         <p>Many countries do not produce enough protein to supply their current agricultural activities. For example, Ireland imports 2.5m tonnes of soy protein per annum. What if this could be replaced by insect protein produced using domestic waste? Insect protein is also a more bio-suitable feed for poultry and pigs than soy, reducing the amount of micro-nutrient feed inputs required.</p>
                     </div>
                 </div>
@@ -167,10 +167,10 @@
 
                 <div class="col-sm-6">
                     <p class="text"><strong>If you are an innovative thinker who enjoys solving hard problems please send us an inquiry.</strong><br>
-                    Contact us now ≥</p>
+                    <a class="no-style" href="#contact">Contact us now ≥</a></p>
 
                     <p class="text"><strong>If you have an innovative agricultural project and would like to engage or brainstorm with us please get in contact.</strong><br>
-                    Contact us now ≥</p>
+                    <a class="no-style" href="#contact">Contact us now ≥</a></p>
                 </div>
             </div>
 
@@ -196,7 +196,8 @@
         <script type="text/javascript">
             // Smooth scrolling 
             // http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links/
-            
+            var navbar = (window.innerWidth < 768)? 56: 92;
+
             $(document).ready(function() {
               function filterPath(string) {
               return string
@@ -213,7 +214,7 @@
                     $(this).click(function(event) {
                       var targetOffset = $target.offset().top;
                       event.preventDefault();
-                      $('html, body').animate({scrollTop: targetOffset-93}, 800, function() {
+                      $('html, body').animate({scrollTop: targetOffset-navbar}, 800, function() {
                         // location.hash = target;
                       });
                     });
