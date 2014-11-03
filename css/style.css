@@ -112,11 +112,12 @@ p {
 /* line 86, style.scss */
 .nav > li a {
   color: white;
+  text-shadow: none;
 }
 /* line 89, style.scss */
 .nav > li a:hover, .nav > li a:focus {
   background-color: transparent;
-  color: gray;
+  color: rgba(255, 255, 255, 0.7);
 }
 @media (min-width: 768px) {
   /* line 86, style.scss */
@@ -126,20 +127,20 @@ p {
   }
 }
 
-/* line 102, style.scss */
+/* line 103, style.scss */
 .bg-field {
   height: 250px;
-  background: black url("../images/1.jpg") no-repeat;
+  background: url("../images/1.jpg") no-repeat;
   background-size: 125% auto;
   background-position: center top;
   margin-top: 39px;
 }
-/* line 108, style.scss */
+/* line 109, style.scss */
 .bg-field .row {
   display: table;
   height: 90%;
 }
-/* line 112, style.scss */
+/* line 113, style.scss */
 .bg-field strong {
   width: 100%;
   display: table-cell;
@@ -149,198 +150,198 @@ p {
   color: white;
 }
 @media (min-width: 768px) {
-  /* line 102, style.scss */
+  /* line 103, style.scss */
   .bg-field {
     height: 522px;
     margin-top: 69px;
     background-size: 104% auto;
   }
-  /* line 124, style.scss */
+  /* line 125, style.scss */
   .bg-field strong {
     font-size: 48px;
   }
 }
 
-/* line 130, style.scss */
+/* line 131, style.scss */
 #agriculture-text {
   margin-top: 18px;
   font-size: 19px;
   text-align: center;
   line-height: 1.35;
 }
-/* line 135, style.scss */
+/* line 136, style.scss */
 #agriculture-text strong {
   line-height: 1.2;
   display: block;
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 130, style.scss */
+  /* line 131, style.scss */
   #agriculture-text {
     margin-top: 52px;
     font-size: 21px;
   }
-  /* line 143, style.scss */
+  /* line 144, style.scss */
   #agriculture-text strong {
     display: block;
     font-size: 24px;
   }
 }
 
-/* line 150, style.scss */
+/* line 151, style.scss */
 #about {
   margin-top: 25px;
   padding-top: 20px 0 0 0;
 }
-/* line 153, style.scss */
+/* line 154, style.scss */
 #about p.text-green {
   padding-bottom: 10px;
   font-size: 19px;
 }
-/* line 157, style.scss */
+/* line 158, style.scss */
 #about > p:nth-child(2) {
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  /* line 150, style.scss */
+  /* line 151, style.scss */
   #about {
     border-top: 4px solid gray;
     margin-top: 58px;
     padding: 44px 0 0 0;
   }
-  /* line 164, style.scss */
+  /* line 165, style.scss */
   #about p.text-green {
     padding-bottom: 116px;
     font-size: 29px;
   }
 }
 
-/* line 171, style.scss */
+/* line 172, style.scss */
 .bg-white .col-sm-6 {
   padding-left: 6px;
   padding-right: 10px;
 }
 @media (min-width: 768px) {
-  /* line 176, style.scss */
+  /* line 177, style.scss */
   .bg-white .col-sm-6 {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-/* line 182, style.scss */
+/* line 183, style.scss */
 #white1 {
   padding-top: 15px;
 }
-/* line 184, style.scss */
+/* line 185, style.scss */
 #white1 p {
   margin-top: 22px;
   padding-bottom: 20px;
 }
-/* line 188, style.scss */
+/* line 189, style.scss */
 #white1 img {
   max-width: 100%;
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
-  /* line 182, style.scss */
+  /* line 183, style.scss */
   #white1 {
     padding-top: 17px;
   }
-  /* line 195, style.scss */
+  /* line 196, style.scss */
   #white1 .text-green {
     font-size: 22px;
   }
-  /* line 198, style.scss */
+  /* line 199, style.scss */
   #white1 .col-sm-6:first-child {
     padding-right: 84px;
   }
-  /* line 201, style.scss */
+  /* line 202, style.scss */
   #white1 img {
     padding-bottom: 30px;
   }
 }
 
-/* line 206, style.scss */
+/* line 207, style.scss */
 #white2 {
   margin-top: 26px;
   padding-top: 16px;
 }
-/* line 209, style.scss */
+/* line 210, style.scss */
 #white2 p {
   margin-top: 20px;
 }
-/* line 212, style.scss */
+/* line 213, style.scss */
 #white2 img {
   max-width: 100%;
   margin-top: 22px;
   margin-bottom: 3px;
 }
 @media (min-width: 768px) {
-  /* line 206, style.scss */
+  /* line 207, style.scss */
   #white2 {
     margin-top: 45px;
     padding-top: 17px;
   }
-  /* line 220, style.scss */
+  /* line 221, style.scss */
   #white2 .text-green {
     font-size: 22px;
   }
-  /* line 223, style.scss */
+  /* line 224, style.scss */
   #white2 .col-sm-6:first-child {
     padding-right: 84px;
   }
-  /* line 226, style.scss */
+  /* line 227, style.scss */
   #white2 img {
     padding-bottom: 10px;
   }
-  /* line 229, style.scss */
+  /* line 230, style.scss */
   #white2 .no-bold {
     font-weight: normal;
   }
 }
 
-/* line 236, style.scss */
+/* line 237, style.scss */
 #we-believe-text .text-green {
   font-size: 18px;
 }
-/* line 239, style.scss */
+/* line 240, style.scss */
 #we-believe-text p {
   margin: 22px 0;
 }
-/* line 240, style.scss */
+/* line 241, style.scss */
 #we-believe-text p:last-child {
   margin-bottom: 13px;
 }
 @media (min-width: 768px) {
-  /* line 244, style.scss */
+  /* line 245, style.scss */
   #we-believe-text .text-green {
     font-size: 23px;
   }
-  /* line 247, style.scss */
+  /* line 248, style.scss */
   #we-believe-text .col-sm-6:last-child {
     padding-right: 48px;
   }
-  /* line 250, style.scss */
+  /* line 251, style.scss */
   #we-believe-text p:last-child {
     margin-bottom: 65px;
   }
 }
 
-/* line 256, style.scss */
+/* line 257, style.scss */
 .bg-yard {
   height: 162px;
-  background: black url("../images/2.jpg") no-repeat;
+  background: url("../images/2.jpg") no-repeat;
   background-size: 150% auto;
   background-position: center top;
   color: white;
 }
-/* line 262, style.scss */
+/* line 263, style.scss */
 .bg-yard .row {
   display: table;
   height: 100%;
 }
-/* line 266, style.scss */
+/* line 267, style.scss */
 .bg-yard p {
   display: table-cell;
   vertical-align: middle;
@@ -349,7 +350,7 @@ p {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 256, style.scss */
+  /* line 257, style.scss */
   .bg-yard {
     height: 341px;
     background-size: 129% auto;
@@ -357,53 +358,53 @@ p {
   }
 }
 
-/* line 279, style.scss */
+/* line 280, style.scss */
 #systematic {
   margin-top: 10px;
   text-align: center;
   font-size: 18px;
 }
 
-/* line 285, style.scss */
+/* line 286, style.scss */
 #projects {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 289, style.scss */
+/* line 290, style.scss */
 #projects .projects-heading {
   margin-bottom: 20px;
   font-size: 19px;
 }
-/* line 294, style.scss */
+/* line 295, style.scss */
 #projects ul {
   padding-left: 0;
   padding-bottom: 10px;
   list-style: none;
   font-weight: bold;
 }
-/* line 300, style.scss */
+/* line 301, style.scss */
 #projects li {
   padding-bottom: 21px;
   border-top: 2px solid #479376;
   color: #479376;
 }
-/* line 305, style.scss */
+/* line 306, style.scss */
 #projects li:hover, #projects li:active {
   border-top: 2px solid #00653b;
   color: #00653b;
 }
 @media (min-width: 768px) {
-  /* line 285, style.scss */
+  /* line 286, style.scss */
   #projects {
     padding-top: 33px;
     padding-bottom: 17px;
   }
-  /* line 313, style.scss */
+  /* line 314, style.scss */
   #projects .projects-heading {
     font-size: 29px;
     margin-bottom: 43px;
   }
-  /* line 317, style.scss */
+  /* line 318, style.scss */
   #projects li {
     border-top: 1px solid #479376;
     padding-bottom: 25px;
@@ -411,55 +412,55 @@ p {
   }
 }
 
-/* line 325, style.scss */
+/* line 326, style.scss */
 .bg-tramlines {
   height: 158px;
-  background: black url("../images/3.jpg") no-repeat;
+  background: url("../images/3.jpg") no-repeat;
   background-size: 100% auto;
   background-position: center bottom;
   color: white;
 }
-/* line 331, style.scss */
+/* line 332, style.scss */
 .bg-tramlines .row {
   display: table;
   width: 100%;
   height: 98%;
 }
-/* line 336, style.scss */
+/* line 337, style.scss */
 .bg-tramlines p {
   display: table-cell;
   vertical-align: bottom;
 }
 @media (min-width: 768px) {
-  /* line 325, style.scss */
+  /* line 326, style.scss */
   .bg-tramlines {
     height: 340px;
     background-size: 100% auto;
     background-position: center center;
     font-size: 27px;
   }
-  /* line 345, style.scss */
+  /* line 346, style.scss */
   .bg-tramlines .row {
     padding-left: 20px;
     height: 93%;
   }
 }
 
-/* line 353, style.scss */
+/* line 354, style.scss */
 #wewant p {
   margin-top: 11px;
   margin-bottom: 21px;
 }
 @media (min-width: 768px) {
-  /* line 352, style.scss */
+  /* line 353, style.scss */
   #wewant {
     margin-top: 6px;
   }
-  /* line 359, style.scss */
+  /* line 360, style.scss */
   #wewant .heading {
     font-size: 25px;
   }
-  /* line 362, style.scss */
+  /* line 363, style.scss */
   #wewant .text {
     border-top: 1px solid #00653b;
     padding-top: 7px;
@@ -468,14 +469,14 @@ p {
   }
 }
 
-/* line 371, style.scss */
+/* line 372, style.scss */
 #media {
   height: 230px;
   padding-top: 12px;
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 371, style.scss */
+  /* line 372, style.scss */
   #media {
     margin-top: 24px;
     padding-top: 20px;
@@ -483,25 +484,25 @@ p {
   }
 }
 
-/* line 382, style.scss */
+/* line 383, style.scss */
 #contact {
   margin-top: 5px;
 }
-/* line 384, style.scss */
+/* line 385, style.scss */
 #contact .heading {
   font-size: 30px;
 }
-/* line 387, style.scss */
+/* line 388, style.scss */
 #contact p {
   margin-top: 8px;
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 382, style.scss */
+  /* line 383, style.scss */
   #contact {
     margin-top: 20px;
   }
-  /* line 393, style.scss */
+  /* line 394, style.scss */
   #contact p {
     font-size: 22px;
   }

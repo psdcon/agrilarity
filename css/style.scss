@@ -88,8 +88,9 @@ p{margin:0;}
         color: white;
         &:hover, &:focus{
             background-color: transparent;
-            color: gray;
+            color: rgba(255,255,255,0.7);
         }
+        text-shadow: none;
         // Control spacing between words
         @media (min-width: $tabletWidth){
             padding:0 7px 0 7px;
@@ -101,7 +102,7 @@ p{margin:0;}
 // Content
 .bg-field{
     height: 250px;
-    background: black url('../images/1.jpg') no-repeat;
+    background: url('../images/1.jpg') no-repeat;
     background-size: 125% auto;
     background-position: center top;
     margin-top: 39px;
@@ -255,7 +256,7 @@ p{margin:0;}
 
 .bg-yard{
     height: 162px;
-    background: black url('../images/2.jpg') no-repeat;
+    background: url('../images/2.jpg') no-repeat;
     background-size: 150% auto;
     background-position: center top;
     color: white;
@@ -324,7 +325,7 @@ p{margin:0;}
 
 .bg-tramlines{
     height: 158px;
-    background: black url('../images/3.jpg') no-repeat;
+    background: url('../images/3.jpg') no-repeat;
     background-size: 100% auto;
     background-position: center bottom;
     color: white;
