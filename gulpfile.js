@@ -46,16 +46,16 @@ gulp.task('compass', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('svg', function () {
-  var svgs = gulp.src('svg/*.svg')
-    .pipe(svgmin())
-    .pipe(svgstore({ fileName: 'icons.svg', prefix: 'icon-', inlineSvg: true }))
-    .pipe(gulp.dest(''));
+// gulp.task('svg', function () {
+//   var svgs = gulp.src('svg/*.svg')
+//     .pipe(svgmin())
+//     .pipe(svgstore({ fileName: 'icons.svg', prefix: 'icon-', inlineSvg: true }))
+//     .pipe(gulp.dest(''));
 
-  gulp.src('src/index.html')
-    .pipe(inject(svgs, { transform: fileContents }))
-    .pipe(gulp.dest(''))
-    .pipe(connect.reload());
-});
+//   gulp.src('index.html')
+//     .pipe(inject(svgs, { transform: fileContents }))
+//     .pipe(gulp.dest(''))
+//     .pipe(connect.reload());
+// });
 
 gulp.task('default', ['html', 'compass', 'connect', 'watch']);
