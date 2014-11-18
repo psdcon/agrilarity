@@ -108,12 +108,15 @@ p{margin:0;}
 // Content
 .bg-field{
     position: relative;
-    max-height: 250px;
+    height: 250px;
     margin-top: 39px;
     overflow: hidden;
     background: url('../media/images/bg-field-2160.jpg') no-repeat;
     background-position: center top;
     background-size: 125% auto;
+    .videoWrapper{ /* Hide video on lower res */
+        display: none;
+    }
     strong{
         position: absolute;
         width: 100%;
@@ -125,21 +128,26 @@ p{margin:0;}
         color: white;
     }
     @media (min-width: $tabletWidth){
-        max-height: 522px;
+        height: 435px;
         margin-top: 69px;
         background-size: 104% auto;
-        
+        .videoWrapper{ /* Show video on lower res */
+            display: block;
+        }
         strong{
             font-size: 48px;            
         }
     }
+    @media (min-width: 925px){
+        height: 522px;
+    }
 }
 .videoWrapper {
-    background-color: black;
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
     height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.25%; /* 16:9 */
+    background-color: black;
 }
 #videobg {
     position: absolute;
