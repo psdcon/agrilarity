@@ -80,6 +80,7 @@
                     <source src="media/comex.webm" type="video/webm">
                     <source src="media/comex.mp4" type="video/mp4">
                 </video>
+                <img class="play-button" title="Pause" src="media/images/pause.png" alt="Pause Button">
             </div>
             <strong>Digitising Agriculture</strong>
         </div>
@@ -105,8 +106,11 @@
 
                     <p>Green Revolution agriculture effectively outsourced seed, soil, and pest management historically done on farm to companies that became today's global agricultural giants.</p>
                 </div>
-                <div class="col-sm-6 center-img">
-                    <img src="media/images/graph1.png" alt="Graph 1">
+                <div class="col-sm-6 g1-cont">
+                    <div class="graph1">
+                        <img class="top-layer" src="media/images/graph1-2.png" alt="Graph 1">
+                        <img src="media/images/graph1-1.png" alt="Graph 1">
+                    </div><br>
                 </div>
             </div>
             <div id="white2" class="row limit bg-white">
@@ -115,21 +119,24 @@
 
                     <p>As the chart demonstrates, our ability to replace soil fertility with artificial inputs is diminishing. We need to change our farming habits significantly if we are to feed 9bn people by 2050.</p>
                 </div>
-                <div class="col-sm-6 center-img">
-                    <img src="media/images/graph2.png" alt="Graph 2">
+                <div class="col-sm-6 g2-cont">
+                    <div class="graph2">
+                        <div class="top-layer"><!-- Has images set as background --></div>
+                        <img src="media/images/graph2-1.png" alt="Graph 2">
+                    </div><br>
                 </div>
             </div>
             </div>
             <div id="we-believe-text" class="row limit">
                 <div class="col-sm-6">
-                    <p class="text-green">We believe that the next agricultural revolution will be digital & automated.</p>
+                    <p class="text-green">We believe that the next agricultural revolution will be digital &amp; automated.</p>
                 </div>
                 <div class="col-sm-6">
                     <p>Current agricultural measurement is crude and point in time, it needs to be accurate and real time if we are to affect revolutionary change.</p>
 
                     <p>Through their role on Singularity University's Exponential Advisory Board our founders realised that the technologies required to begin the next agricultural revolution are available today, just spread across many different industries and disciplines.</p>
 
-                    <p>Agrilarity has been founded to promote and implement increased digitisation & automation of agricultural processes that can reduce cost, waste, and inefficiencies.</p>
+                    <p>Agrilarity has been founded to promote and implement increased digitisation &amp; automation of agricultural processes that can reduce cost, waste, and inefficiencies.</p>
                 </div>
             </div>
         </div>
@@ -155,17 +162,19 @@
                     <p class="projects-heading">Current Agrilarity Projects</p>
                 </div>
                 <div class="col-sm-5">
-                    <ul>
-                        <li><a href="#projects">FLUX BDS ≥</a></li>
-                        <li><a href="#projects">INSECT PROTEIN ≥</a></li>
-                        <li><a href="#projects">AGRILARITY QS ≥</a></li>
-                        <li><a href="#projects">AGRICULTURAL AUTOMATION ≥</a></li>
-                        <li><a href="#projects">MICROBIAL SOLUTIONS ≥</a></li>
+                    <ul id="projects-list">
+                        <li class="selected" onmouseover="replaceText(this,'flux');">FLUX BDS ≥</li>
+                        <li onmouseover="replaceText(this,'protein');">INSECT PROTEIN ≥</li>
+                        <li onmouseover="replaceText(this,'qs');">AGRILARITY QS ≥</li>
+                        <li onmouseover="replaceText(this,'automation');">AGRICULTURAL AUTOMATION ≥</li>
+                        <li onmouseover="replaceText(this,'microbial');">MICROBIAL SOLUTIONS ≥</li>
                     </ul>
                 </div>
             
-                <div class="col-sm-offset-1 col-sm-6">
-                    <p>Many countries do not produce enough protein to supply their current agricultural activities. For example, Ireland imports 2.5m tonnes of soy protein per annum. What if this could be replaced by insect protein produced using domestic waste? Insect protein is also a more bio-suitable feed for poultry and pigs than soy, reducing the amount of micro-nutrient feed inputs required.</p>
+                <div id="project-text" class="col-sm-offset-1 col-sm-6">
+                    <p>
+                        Digitisation &amp; automation of manual processes, enabling Big Data analytics for enterprises. <a href="#">Flux Homepage</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -212,7 +221,6 @@
             <div class="col-sm-6"><p class="heading">Contact</p></div>
             <div class="col-sm-6"><a href="mailto:info@agrilarity" target="_blank">info@agrilarity ≥</a></div>
         </div>
-    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bootstrap/js/jquery.js"></script>
@@ -249,7 +257,86 @@
               }
             }
           });
+
+          //Play Pause button
+          $('.play-button').click(function(){
+            var video = $('#videobg').get(0);
+            if (!video.paused){
+                video.pause();
+                $(this).attr('src','media/images/play.png');
+                $(this).attr('title','Play');
+            }
+            else {
+                video.play();
+                $(this).attr('src','media/images/pause.png');
+                $(this).attr('title','Pause');
+            }
+          });
         });
+
+        // Activate scroll based animations
+        $(window).scroll(function() {
+            $('.top-layer').each(function(){
+                var imagePos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow+window.innerHeight*0.7) {
+                    $(this).addClass("inview");
+                }
+            });
+
+
+            var el = $('#projects-list');
+            var topOfList = el.offset().top;
+            var topOfWindow = $(window).scrollTop(), w = window.innerHeight;
+            if (topOfList < topOfWindow+(w*0.9)) {
+                $('#project-text').css('opacity','1');
+            }
+            if (topOfList < topOfWindow+(w*0.6) && topOfList > topOfWindow+(w*0.5)) {
+                $('#projects-list li:nth-child(1)').trigger("mouseover");
+            }
+            if (topOfList < topOfWindow+(w*0.5) && topOfList > topOfWindow+(w*0.4)) {
+                $('#projects-list li:nth-child(2)').trigger("mouseover");
+            }
+            if (topOfList < topOfWindow+(w*0.4) && topOfList > topOfWindow+(w*0.3)) {
+                $('#projects-list li:nth-child(3)').trigger("mouseover");
+            }
+            if (topOfList < topOfWindow+(w*0.3) && topOfList > topOfWindow+(w*0.2)) {
+                $('#projects-list li:nth-child(4)').trigger("mouseover");
+            }
+            if (topOfList < topOfWindow+(w*0.2) && topOfList > topOfWindow) {
+                $('#projects-list li:nth-child(5)').trigger("mouseover");
+            }
+        });
+
+        
+        var text = {
+            "flux":"Digitisation &amp; automation of manual processes, enabling Big Data analytics for enterprises. <a href=\"#\">Flux Homepage</a>",
+            "protein":"Many countries do not produce enough protein to supply their current agricultural activities. For example, Ireland imports 2.5m tonnes of soy protein per annum. What if this could be replaced by insect protein produced using domestic waste? Insect protein is also a more bio-suitable feed for poultry and pigs than soy, reducing the amount of micro-nutrient feed inputs required.",
+            "qs":"A hardware project to improve quality analytics and reporting in bulk grain supply chains.",
+            "automation":"A project to monitor &amp; automate current agricultural practices",
+            "microbial": "We believe that many agricultural inputs can be replaced by natural processes performed by microbes, so we are doing ongoing research in this area."
+        };
+        var visEl;
+        function replaceText(thisEl,keyword){
+            console.log("This el");
+            console.log(thisEl);
+            console.log("Visible el");
+            console.log(visEl);
+
+            if(visEl != thisEl){
+                visEl = thisEl;
+                $("#project-text")
+                    .css("opacity","0");
+                $('li.selected').removeClass('selected');
+                $(thisEl).addClass('selected');
+                window.setTimeout(function(){
+                    $("#project-text")
+                    .html(text[keyword])
+                    .css("opacity","1");
+                }, 200);
+            }
+        }
+
     </script>
 </body>
 </html>

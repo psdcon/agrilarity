@@ -189,16 +189,17 @@ p {
 
 /* line 145, style.scss */
 .videoWrapper {
+  background: url("../media/images/bg-field-2160.jpg") no-repeat;
   position: relative;
   height: 0;
   padding-top: 25px;
   padding-bottom: 56.25%;
   /* 16:9 */
-  background-color: black;
 }
 
-/* line 152, style.scss */
+/* line 153, style.scss */
 #videobg {
+  background-color: black;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -209,7 +210,32 @@ p {
   z-index: 1;
 }
 
-/* line 162, style.scss */
+/* line 164, style.scss */
+.play-button {
+  position: absolute;
+  right: 20px;
+  z-index: 3;
+  width: 30px;
+  opacity: 0.7;
+}
+/* line 170, style.scss */
+.play-button:hover {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  /* line 164, style.scss */
+  .play-button {
+    top: 390px;
+  }
+}
+@media (min-width: 925px) {
+  /* line 164, style.scss */
+  .play-button {
+    top: 475px;
+  }
+}
+
+/* line 180, style.scss */
 #agriculture-text {
   margin-top: 18px;
   padding-bottom: 25px;
@@ -217,163 +243,201 @@ p {
   text-align: center;
   line-height: 1.35;
 }
-/* line 168, style.scss */
+/* line 186, style.scss */
 #agriculture-text strong {
   display: block;
   font-size: 20px;
   line-height: 1.2;
 }
 @media (min-width: 768px) {
-  /* line 162, style.scss */
+  /* line 180, style.scss */
   #agriculture-text {
     margin-top: 52px;
     padding-bottom: 58px;
     font-size: 21px;
   }
-  /* line 177, style.scss */
+  /* line 195, style.scss */
   #agriculture-text strong {
     font-size: 24px;
   }
 }
 
-/* line 183, style.scss */
+/* line 201, style.scss */
 #about {
   padding: 20px 0 0 0;
 }
-/* line 185, style.scss */
+/* line 203, style.scss */
 #about p.text-green {
   padding-right: 28px;
   padding-bottom: 10px;
   font-size: 19px;
 }
-/* line 190, style.scss */
+/* line 208, style.scss */
 #about .col-sm-offset-1 {
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  /* line 183, style.scss */
+  /* line 201, style.scss */
   #about {
     padding: 34px 0 0 0;
     border-top: 4px solid gray;
   }
-  /* line 196, style.scss */
+  /* line 214, style.scss */
   #about p.text-green {
     padding-bottom: 120px;
     font-size: 29px;
   }
 }
 
-/* line 202, style.scss */
+/* line 220, style.scss */
 .white-padding {
   padding-left: 7.5px;
   padding-right: 10px;
 }
 @media (min-width: 768px) {
-  /* line 202, style.scss */
+  /* line 220, style.scss */
   .white-padding {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-/* line 210, style.scss */
+/* line 228, style.scss */
 .bg-white {
   padding-top: 15px;
 }
-/* line 212, style.scss */
+/* line 230, style.scss */
 .bg-white .col-sm-6 {
   padding-left: 7.5px;
 }
-/* line 215, style.scss */
-.bg-white .center-img {
-  text-align: center;
-}
-/* line 218, style.scss */
+/* line 233, style.scss */
 .bg-white p {
   margin-top: 22px;
   padding-bottom: 20px;
 }
-/* line 222, style.scss */
-.bg-white img {
-  max-width: 100%;
-  padding-bottom: 12px;
-}
 @media (min-width: 768px) {
-  /* line 210, style.scss */
+  /* line 228, style.scss */
   .bg-white {
     padding-top: 22px;
   }
-  /* line 228, style.scss */
+  /* line 239, style.scss */
   .bg-white .text-green {
     font-size: 22px;
     line-height: 1.3;
   }
-  /* line 232, style.scss */
+  /* line 243, style.scss */
   .bg-white .col-sm-6 {
     padding-left: 0;
   }
-  /* line 235, style.scss */
+  /* line 246, style.scss */
   .bg-white .col-sm-6:first-child {
     padding-right: 125px;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 242, style.scss */
-  #white1 img {
+  /* line 251, style.scss */
+  .g1-cont, .g2-cont {
     padding-top: 12px;
     padding-bottom: 24px;
   }
 }
 
-/* line 248, style.scss */
+/* line 257, style.scss */
+.graph1, .graph2 {
+  max-width: 423px;
+  margin: 0 auto;
+}
+/* line 260, style.scss */
+.graph1 img, .graph2 img {
+  max-width: 100%;
+}
+
+/* line 265, style.scss */
+.graph1 {
+  position: relative;
+  overflow: hidden;
+}
+/* line 268, style.scss */
+.graph1 .top-layer {
+  position: absolute;
+  -webkit-transition: all 2s ease;
+          transition: all 2s ease;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+/* line 273, style.scss */
+.graph1 .top-layer.inview {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* line 277, style.scss */
+.graph2 {
+  position: relative;
+}
+/* line 279, style.scss */
+.graph2 .top-layer {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  max-width: 100%;
+  background-image: url(../media/images/graph2-2.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  -webkit-transition: width 3s ease;
+          transition: width 3s ease;
+}
+/* line 289, style.scss */
+.graph2 .top-layer.inview {
+  width: 100%;
+}
+
+/* line 293, style.scss */
 #white2 {
   margin-top: 26px;
 }
 @media (min-width: 768px) {
-  /* line 248, style.scss */
+  /* line 293, style.scss */
   #white2 {
     margin-top: 45px;
   }
-  /* line 252, style.scss */
-  #white2 img {
-    padding-top: 12px;
-    padding-bottom: 14px;
-  }
-  /* line 256, style.scss */
+  /* line 297, style.scss */
   #white2 .no-bold {
     font-weight: normal;
   }
 }
 
-/* line 263, style.scss */
+/* line 304, style.scss */
 #we-believe-text .text-green {
   font-size: 18px;
 }
-/* line 266, style.scss */
+/* line 307, style.scss */
 #we-believe-text p {
   margin: 20px 0;
 }
-/* line 269, style.scss */
+/* line 310, style.scss */
 #we-believe-text p:last-child {
   margin-bottom: 13px;
 }
 @media (min-width: 768px) {
-  /* line 273, style.scss */
+  /* line 314, style.scss */
   #we-believe-text .text-green {
     font-size: 23px;
   }
-  /* line 276, style.scss */
+  /* line 317, style.scss */
   #we-believe-text p:last-child {
     margin-bottom: 65px;
   }
-  /* line 279, style.scss */
+  /* line 320, style.scss */
   #we-believe-text .col-sm-6:last-child {
     padding-right: 48px;
   }
 }
 
-/* line 285, style.scss */
+/* line 326, style.scss */
 .bg-yard {
   height: 164px;
   background: url("../media/images/bg-yard.jpg") no-repeat;
@@ -381,12 +445,12 @@ p {
   background-position: center bottom;
   color: white;
 }
-/* line 291, style.scss */
+/* line 332, style.scss */
 .bg-yard .row {
   display: table;
   height: 100%;
 }
-/* line 295, style.scss */
+/* line 336, style.scss */
 .bg-yard p {
   display: table-cell;
   padding: 0 70px;
@@ -395,26 +459,26 @@ p {
   text-align: center;
 }
 @media (min-width: 485px) {
-  /* line 285, style.scss */
+  /* line 326, style.scss */
   .bg-yard {
     background-size: 100% auto;
   }
 }
 @media (min-width: 768px) {
-  /* line 285, style.scss */
+  /* line 326, style.scss */
   .bg-yard {
     height: 341px;
     background-size: auto 100%;
   }
 }
 @media (min-width: 970px) {
-  /* line 285, style.scss */
+  /* line 326, style.scss */
   .bg-yard {
     background-size: 102% auto;
   }
 }
 
-/* line 313, style.scss */
+/* line 354, style.scss */
 #systematic {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -422,63 +486,85 @@ p {
   font-size: 18px;
 }
 
-/* line 320, style.scss */
+/* line 361, style.scss */
 #projects {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-/* line 323, style.scss */
+/* line 364, style.scss */
 #projects .projects-heading {
   margin-bottom: 20px;
   font-size: 19px;
 }
-/* line 327, style.scss */
+/* line 368, style.scss */
 #projects ul {
   padding-left: 0;
   padding-bottom: 10px;
   list-style: none;
   font-weight: bold;
 }
-/* line 333, style.scss */
+/* line 374, style.scss */
 #projects li {
+  display: block;
+  position: relative;
+  cursor: pointer;
   padding-bottom: 21px;
   border-top: 2px solid #479376;
-}
-/* line 336, style.scss */
-#projects li a {
   color: #479376;
-  text-decoration: none;
 }
-/* line 340, style.scss */
-#projects li:hover, #projects li:active {
+/* line 382, style.scss */
+#projects li.selected, #projects li:hover {
   border-top: 2px solid #00653b;
   color: #00653b;
 }
+/* line 387, style.scss */
+#projects #project-text {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
 @media (min-width: 768px) {
-  /* line 320, style.scss */
+  /* line 361, style.scss */
   #projects {
     padding-top: 33px;
     padding-bottom: 17px;
   }
-  /* line 348, style.scss */
+  /* line 394, style.scss */
   #projects .projects-heading {
     margin-bottom: 43px;
     font-size: 29px;
   }
-  /* line 352, style.scss */
+  /* line 398, style.scss */
   #projects li {
     border-top: 1px solid #479376;
     padding-top: 7px;
     padding-bottom: 19px;
     font-size: 17px;
   }
-  /* line 358, style.scss */
-  #projects li:hover, #projects li:active {
+  /* line 403, style.scss */
+  #projects li.selected, #projects li:hover {
     border-top: 1px solid #00653b;
   }
 }
+@media (min-width: 990px) {
+  /* line 410, style.scss */
+  #projects li:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: calc(480px + 42vw);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #479376;
+  }
+  /* line 422, style.scss */
+  #projects li.selected:after, #projects li:hover:after {
+    background-color: #00653b;
+  }
+}
 
-/* line 365, style.scss */
+/* line 430, style.scss */
 .bg-tramlines {
   height: 158px;
   background: url("../media/images/bg-tramlines-2160.jpg") no-repeat;
@@ -486,49 +572,49 @@ p {
   background-position: center bottom;
   color: white;
 }
-/* line 371, style.scss */
+/* line 436, style.scss */
 .bg-tramlines .row {
   display: table;
   padding-left: 10px;
   width: 100%;
   height: 98%;
 }
-/* line 377, style.scss */
+/* line 442, style.scss */
 .bg-tramlines p {
   display: table-cell;
   vertical-align: bottom;
 }
 @media (min-width: 768px) {
-  /* line 365, style.scss */
+  /* line 430, style.scss */
   .bg-tramlines {
     height: 340px;
     background-position: center center;
     font-size: 27px;
   }
-  /* line 385, style.scss */
+  /* line 450, style.scss */
   .bg-tramlines .row {
     height: 93%;
     padding-left: 40px;
   }
 }
 
-/* line 393, style.scss */
+/* line 458, style.scss */
 #wewant p {
   margin-top: 11px;
   margin-bottom: 21px;
 }
 @media (min-width: 768px) {
-  /* line 392, style.scss */
+  /* line 457, style.scss */
   #wewant {
     margin-top: 4px;
   }
-  /* line 399, style.scss */
+  /* line 464, style.scss */
   #wewant .heading {
     font-size: 23px;
     padding-top: 10px;
     padding-right: 100px;
   }
-  /* line 404, style.scss */
+  /* line 469, style.scss */
   #wewant .text {
     border-top: 1px solid #00653b;
     padding-top: 6px;
@@ -537,42 +623,43 @@ p {
   }
 }
 
-/* line 413, style.scss */
+/* line 478, style.scss */
 #media {
   min-height: 234px;
   padding-top: 12px;
 }
-/* line 416, style.scss */
+/* line 481, style.scss */
 #media h2 {
   font-size: 18px;
 }
-/* line 419, style.scss */
+/* line 484, style.scss */
 #media a {
   margin: 20px;
 }
 @media (min-width: 768px) {
-  /* line 413, style.scss */
+  /* line 478, style.scss */
   #media {
     margin-top: 30px;
     padding-top: 20px;
   }
-  /* line 425, style.scss */
+  /* line 490, style.scss */
   #media h2 {
     font-size: 30px;
   }
 }
 
-/* line 430, style.scss */
+/* line 495, style.scss */
 a.box {
   display: inline-block;
   overflow: hidden;
   height: 234px;
 }
-/* line 435, style.scss */
+/* line 500, style.scss */
 a.box img {
   height: 234px;
+  max-width: 100%;
 }
-/* line 438, style.scss */
+/* line 504, style.scss */
 a.box .caption {
   height: 234px;
   padding: 5px;
@@ -585,7 +672,7 @@ a.box .caption {
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
 }
-/* line 447, style.scss */
+/* line 513, style.scss */
 a.box:hover .caption {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -595,16 +682,16 @@ a.box:hover .caption {
           transform: translateY(-100%);
 }
 
-/* line 453, style.scss */
+/* line 519, style.scss */
 #contact {
   height: 150px;
   margin-top: 5px;
 }
-/* line 456, style.scss */
+/* line 522, style.scss */
 #contact .heading {
   font-size: 30px;
 }
-/* line 459, style.scss */
+/* line 525, style.scss */
 #contact a {
   color: #00653b;
   display: block;
@@ -612,22 +699,27 @@ a.box:hover .caption {
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 453, style.scss */
+  /* line 519, style.scss */
   #contact {
     margin-top: 15px;
   }
-  /* line 467, style.scss */
+  /* line 533, style.scss */
   #contact a {
     font-size: 22px;
   }
 }
 
-/* line 472, style.scss */
+/* line 538, style.scss */
+a {
+  color: inherit;
+}
+
+/* line 541, style.scss */
 a.no-style {
   color: inherit;
   text-decoration: none;
 }
-/* line 475, style.scss */
+/* line 544, style.scss */
 a.no-style:hover, a.no-style:focus {
   text-decoration: underline;
 }

@@ -143,13 +143,15 @@ p{margin:0;}
     }
 }
 .videoWrapper {
+    background: url('../media/images/bg-field-2160.jpg') no-repeat;
+
     position: relative;
     height: 0;
     padding-top: 25px;
     padding-bottom: 56.25%; /* 16:9 */
-    background-color: black;
 }
 #videobg {
+    background-color: black;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -158,6 +160,22 @@ p{margin:0;}
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+.play-button {
+    position: absolute;
+    right: 20px;
+    z-index: 3;
+    width: 30px;
+    opacity: 0.7;
+    &:hover{
+        opacity: 1;
+    }
+    @media (min-width: $tabletWidth){
+        top: 390px;
+    }
+    @media (min-width: 925px){
+        top: 475px;
+    }
 }
 #agriculture-text{
     margin-top: 18px;
@@ -212,16 +230,9 @@ p{margin:0;}
     .col-sm-6{
         padding-left: 7.5px;
     }
-    .center-img{
-        text-align: center;
-    }
     p{
         margin-top: 22px;
         padding-bottom: 20px;
-    }
-    img{
-        max-width: 100%;
-        padding-bottom: 12px;
     }
     @media (min-width: $tabletWidth){
         padding-top: 22px;
@@ -237,22 +248,52 @@ p{margin:0;}
         }
     }
 }
-#white1{
+.g1-cont, .g2-cont{
     @media (min-width: $tabletWidth){
-        img{
-            padding-top: 12px;
-            padding-bottom: 24px;
-        }
+        padding-top: 12px;
+        padding-bottom: 24px;
+    }
+}
+.graph1, .graph2{
+    max-width: 423px;
+    margin: 0 auto;
+    img{
+        max-width: 100%;
+    }
+
+}
+.graph1{
+    position: relative;
+    overflow: hidden;
+    .top-layer{
+        position: absolute;
+        transition: all 2s ease;
+        transform: translateY(-100%);
+    }
+    .top-layer.inview{
+        transform: translateY(0);
+    }
+}
+.graph2{
+    position: relative;
+    .top-layer{
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        max-width: 100%;
+        background-image: url(../media/images/graph2-2.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        transition: width 3s ease;
+    }
+    .top-layer.inview{
+        width: 100%;
     }
 }
 #white2{
     margin-top: 26px;
     @media (min-width: $tabletWidth){
         margin-top: 45px;
-        img{
-            padding-top: 12px;
-            padding-bottom: 14px;
-        }
         .no-bold{
             font-weight: normal;
         }
@@ -331,17 +372,22 @@ p{margin:0;}
         font-weight: bold;
     }
     li{
+        display: block;
+        position: relative;
+        cursor: pointer;
         padding-bottom: 21px;
         border-top: 2px solid $faded-green;
-        a{
-            color: $faded-green;
-            text-decoration: none;
-        }
-        &:hover, &:active{
+        color: $faded-green;
+
+        &.selected, &:hover{
             border-top: 2px solid $green;
             color: $green;
         }
     }
+    #project-text{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }    
     @media (min-width: $tabletWidth){
         padding-top: 33px;
         padding-bottom: 17px;
@@ -354,9 +400,28 @@ p{margin:0;}
             padding-top: 7px;
             padding-bottom: 19px;
             font-size: 17px;
-
-            &:hover, &:active{
+            &.selected, &:hover{
                 border-top: 1px solid $green;
+            }
+        }
+    }
+    @media (min-width: 990px){
+        li{
+            &:after{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                left: calc(480px + 42vw);
+
+                width: 20px;
+                height: 20px;
+                border-radius:50%;
+                background-color: $faded-green;
+            }
+            &.selected, &:hover{
+                &:after{
+                    background-color: $green;
+                }
             }
         }
     }
@@ -434,6 +499,7 @@ a.box{
 
     img{
         height: 234px;
+        max-width: 100%;
     }
     .caption{
         height: 234px;
@@ -468,6 +534,9 @@ a.box{
             font-size: 22px;
         }
     }
+}
+a{
+    color: inherit;
 }
 a.no-style{
     color: inherit;
