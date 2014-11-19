@@ -387,6 +387,9 @@ p{margin:0;}
     #project-text{
         opacity: 0;
         transition: all 0.3s ease;
+        a{
+            color: $faded-green;
+        }
     }    
     @media (min-width: $tabletWidth){
         padding-top: 33px;
@@ -494,25 +497,28 @@ p{margin:0;}
 }
 a.box{
     display: inline-block;
+    position: relative;
     overflow: hidden;
-    height: 234px;
 
     img{
-        height: 234px;
+        max-height: 234px;
         max-width: 100%;
     }
     .caption{
-        height: 234px;
+        position: absolute;
+        top: 0; bottom: 0;
+        right: 0; left: 0;
         padding: 5px;
         padding-top: 100px;
         text-align: center;
         background-color: rgba(0,0,0,0.7);
+
         transition: all 300ms ease;
-        transform: translateX(-100%);
+        transform: translate(-100%,100%);
     }
     &:hover .caption{
-        transform: translateX(0);
-        transform: translateY(-100%);
+        transform: translate(0,0);
+        text-decoration: underline;
     }
 }
 
@@ -534,9 +540,6 @@ a.box{
             font-size: 22px;
         }
     }
-}
-a{
-    color: inherit;
 }
 a.no-style{
     color: inherit;
