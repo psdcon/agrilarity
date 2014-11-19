@@ -386,7 +386,7 @@ p{margin:0;}
     }
     #project-text{
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: all 400ms ease;
         a{
             color: $faded-green;
         }
@@ -403,18 +403,11 @@ p{margin:0;}
             padding-top: 7px;
             padding-bottom: 19px;
             font-size: 17px;
-            &.selected, &:hover{
-                border-top: 1px solid $green;
-            }
-        }
-    }
-    @media (min-width: 990px){
-        li{
             &:after{
                 content: "";
                 display: inline-block;
                 position: absolute;
-                left: calc(480px + 42vw);
+                left: calc(60px + 80vw);
 
                 width: 20px;
                 height: 20px;
@@ -422,10 +415,16 @@ p{margin:0;}
                 background-color: $faded-green;
             }
             &.selected, &:hover{
+                border-top: 1px solid $green;
                 &:after{
                     background-color: $green;
                 }
             }
+        }
+    }
+    @media (min-width: 990px){
+        li:after{
+            left: calc(460px + 42vw);            
         }
     }
 }
@@ -499,7 +498,6 @@ a.box{
     display: inline-block;
     position: relative;
     overflow: hidden;
-
     img{
         max-height: 234px;
         max-width: 100%;

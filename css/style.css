@@ -520,8 +520,8 @@ p {
 /* line 387, style.scss */
 #projects #project-text {
   opacity: 0;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  -webkit-transition: all 400ms ease;
+          transition: all 400ms ease;
 }
 /* line 390, style.scss */
 #projects #project-text a {
@@ -546,29 +546,33 @@ p {
     font-size: 17px;
   }
   /* line 406, style.scss */
-  #projects li.selected, #projects li:hover {
-    border-top: 1px solid #00653b;
-  }
-}
-@media (min-width: 990px) {
-  /* line 413, style.scss */
   #projects li:after {
     content: "";
     display: inline-block;
     position: absolute;
-    left: calc(480px + 42vw);
+    left: calc(60px + 80vw);
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #479376;
   }
-  /* line 425, style.scss */
+  /* line 417, style.scss */
+  #projects li.selected, #projects li:hover {
+    border-top: 1px solid #00653b;
+  }
+  /* line 419, style.scss */
   #projects li.selected:after, #projects li:hover:after {
     background-color: #00653b;
   }
 }
+@media (min-width: 990px) {
+  /* line 426, style.scss */
+  #projects li:after {
+    left: calc(460px + 42vw);
+  }
+}
 
-/* line 433, style.scss */
+/* line 432, style.scss */
 .bg-tramlines {
   height: 158px;
   background: url("../media/images/bg-tramlines-2160.jpg") no-repeat;
@@ -576,49 +580,49 @@ p {
   background-position: center bottom;
   color: white;
 }
-/* line 439, style.scss */
+/* line 438, style.scss */
 .bg-tramlines .row {
   display: table;
   padding-left: 10px;
   width: 100%;
   height: 98%;
 }
-/* line 445, style.scss */
+/* line 444, style.scss */
 .bg-tramlines p {
   display: table-cell;
   vertical-align: bottom;
 }
 @media (min-width: 768px) {
-  /* line 433, style.scss */
+  /* line 432, style.scss */
   .bg-tramlines {
     height: 340px;
     background-position: center center;
     font-size: 27px;
   }
-  /* line 453, style.scss */
+  /* line 452, style.scss */
   .bg-tramlines .row {
     height: 93%;
     padding-left: 40px;
   }
 }
 
-/* line 461, style.scss */
+/* line 460, style.scss */
 #wewant p {
   margin-top: 11px;
   margin-bottom: 21px;
 }
 @media (min-width: 768px) {
-  /* line 460, style.scss */
+  /* line 459, style.scss */
   #wewant {
     margin-top: 4px;
   }
-  /* line 467, style.scss */
+  /* line 466, style.scss */
   #wewant .heading {
     font-size: 23px;
     padding-top: 10px;
     padding-right: 100px;
   }
-  /* line 472, style.scss */
+  /* line 471, style.scss */
   #wewant .text {
     border-top: 1px solid #00653b;
     padding-top: 6px;
@@ -627,43 +631,43 @@ p {
   }
 }
 
-/* line 481, style.scss */
+/* line 480, style.scss */
 #media {
   min-height: 234px;
   padding-top: 12px;
 }
-/* line 484, style.scss */
+/* line 483, style.scss */
 #media h2 {
   font-size: 18px;
 }
-/* line 487, style.scss */
+/* line 486, style.scss */
 #media a {
   margin: 20px;
 }
 @media (min-width: 768px) {
-  /* line 481, style.scss */
+  /* line 480, style.scss */
   #media {
     margin-top: 30px;
     padding-top: 20px;
   }
-  /* line 493, style.scss */
+  /* line 492, style.scss */
   #media h2 {
     font-size: 30px;
   }
 }
 
-/* line 498, style.scss */
+/* line 497, style.scss */
 a.box {
   display: inline-block;
   position: relative;
   overflow: hidden;
 }
-/* line 503, style.scss */
+/* line 501, style.scss */
 a.box img {
   max-height: 234px;
   max-width: 100%;
 }
-/* line 507, style.scss */
+/* line 505, style.scss */
 a.box .caption {
   position: absolute;
   top: 0;
@@ -680,7 +684,7 @@ a.box .caption {
       -ms-transform: translate(-100%, 100%);
           transform: translate(-100%, 100%);
 }
-/* line 519, style.scss */
+/* line 517, style.scss */
 a.box:hover .caption {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -688,16 +692,16 @@ a.box:hover .caption {
   text-decoration: underline;
 }
 
-/* line 525, style.scss */
+/* line 523, style.scss */
 #contact {
   height: 150px;
   margin-top: 5px;
 }
-/* line 528, style.scss */
+/* line 526, style.scss */
 #contact .heading {
   font-size: 30px;
 }
-/* line 531, style.scss */
+/* line 529, style.scss */
 #contact a {
   color: #00653b;
   display: block;
@@ -705,22 +709,22 @@ a.box:hover .caption {
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 525, style.scss */
+  /* line 523, style.scss */
   #contact {
     margin-top: 15px;
   }
-  /* line 539, style.scss */
+  /* line 537, style.scss */
   #contact a {
     font-size: 22px;
   }
 }
 
-/* line 544, style.scss */
+/* line 542, style.scss */
 a.no-style {
   color: inherit;
   text-decoration: none;
 }
-/* line 547, style.scss */
+/* line 545, style.scss */
 a.no-style:hover, a.no-style:focus {
   text-decoration: underline;
 }

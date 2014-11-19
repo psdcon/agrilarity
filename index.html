@@ -166,12 +166,12 @@
                         <li class="selected" onmouseover="replaceText(this,'flux');">FLUX BDS ≥</li>
                         <li onmouseover="replaceText(this,'qs');">AGRILARITY QS ≥</li>
                         <li onmouseover="replaceText(this,'automation');">AGRICULTURAL AUTOMATION ≥</li>
-                        <li onmouseover="replaceText(this,'protein');">INSECT PROTEIN ≥</li>
                         <li onmouseover="replaceText(this,'microbial');">MICROBIAL SOLUTIONS ≥</li>
+                        <li onmouseover="replaceText(this,'protein');">INSECT PROTEIN ≥</li>
                     </ul>
                 </div>
             
-                <div id="project-text" class="col-sm-offset-1 col-sm-6">
+                <div id="project-text" class="col-sm-offset-1 col-sm-5">
                     <p>
                         Digitisation &amp; automation of manual processes, enabling Big Data analytics for enterprises. <a href="http://www.fluxbds.com/">Flux Homepage</a>
                     </p>
@@ -272,40 +272,50 @@
                 $(this).attr('title','Pause');
             }
           });
-        });
+            
 
-        // Activate scroll based animations
-        $(window).scroll(function() {
-            $('.top-layer').each(function(){
-                var imagePos = $(this).offset().top;
+            // Activate scroll based animations
+            var w = window.innerHeight, fadedIn = false, projectShowing=1;
+            $(window).scroll(function() {
                 var topOfWindow = $(window).scrollTop();
-                if (imagePos < topOfWindow+window.innerHeight*0.7) {
-                    $(this).addClass("inview");
+                
+                var imagePos = $('.g1-cont').offset().top;
+                if (imagePos < topOfWindow+(w*0.6)) {
+                    $('.graph1 .top-layer').addClass("inview");
+                }
+                imagePos = $('.g2-cont').offset().top;
+                if (imagePos < topOfWindow+(w*0.7)) {
+                    $('.graph2 .top-layer').addClass("inview");
+                }
+
+                var el = $('#projects-list');
+                var topOfList = el.offset().top;
+                if (!fadedIn && topOfList < topOfWindow+(w*0.85)) {
+                    console.log("faded in");
+                    fadedIn = true;
+                    $('#project-text').css('opacity','1');
+                }
+                else if (fadedIn && projectShowing != 1 && topOfList > topOfWindow+(w*0.6)) {
+                    $('#projects-list li:nth-child(1)').trigger("mouseover");
+                    projectShowing = 1;
+                }
+                else if (projectShowing != 2 && topOfList < topOfWindow+(w*0.6) && topOfList > topOfWindow+(w*0.5)) {
+                    $('#projects-list li:nth-child(2)').trigger("mouseover");
+                    projectShowing = 2;
+                }
+                else if (projectShowing != 3 && topOfList < topOfWindow+(w*0.5) && topOfList > topOfWindow+(w*0.4)) {
+                    $('#projects-list li:nth-child(3)').trigger("mouseover");
+                    projectShowing = 3;
+                }
+                else if (projectShowing != 4 && topOfList < topOfWindow+(w*0.4) && topOfList > topOfWindow+(w*0.3)) {
+                    $('#projects-list li:nth-child(4)').trigger("mouseover");
+                    projectShowing = 4;
+                }
+                else if (projectShowing != 5 && topOfList < topOfWindow+(w*0.3)) {
+                    $('#projects-list li:nth-child(5)').trigger("mouseover");
+                    projectShowing = 5;
                 }
             });
-
-
-            var el = $('#projects-list');
-            var topOfList = el.offset().top;
-            var topOfWindow = $(window).scrollTop(), w = window.innerHeight;
-            if (topOfList < topOfWindow+(w*0.9)) {
-                $('#project-text').css('opacity','1');
-            }
-            if (topOfList < topOfWindow+(w*0.6) && topOfList > topOfWindow+(w*0.5)) {
-                $('#projects-list li:nth-child(1)').trigger("mouseover");
-            }
-            if (topOfList < topOfWindow+(w*0.5) && topOfList > topOfWindow+(w*0.4)) {
-                $('#projects-list li:nth-child(2)').trigger("mouseover");
-            }
-            if (topOfList < topOfWindow+(w*0.4) && topOfList > topOfWindow+(w*0.3)) {
-                $('#projects-list li:nth-child(3)').trigger("mouseover");
-            }
-            if (topOfList < topOfWindow+(w*0.3) && topOfList > topOfWindow+(w*0.2)) {
-                $('#projects-list li:nth-child(4)').trigger("mouseover");
-            }
-            if (topOfList < topOfWindow+(w*0.2) && topOfList > topOfWindow) {
-                $('#projects-list li:nth-child(5)').trigger("mouseover");
-            }
         });
 
         
@@ -316,24 +326,18 @@
             "automation":"A project to monitor &amp; automate current agricultural practices",
             "microbial": "We believe that many agricultural inputs can be replaced by natural processes performed by microbes, so we are doing ongoing research in this area."
         };
-        var visEl;
+        var visEl, i=0;
         function replaceText(thisEl,keyword){
-            console.log("This el");
-            console.log(thisEl);
-            console.log("Visible el");
-            console.log(visEl);
-
-            if(visEl != thisEl){
+            if(visEl != thisEl ){
                 visEl = thisEl;
-                $("#project-text")
-                    .css("opacity","0");
                 $('li.selected').removeClass('selected');
                 $(thisEl).addClass('selected');
+                $("#project-text").css("opacity","0");
                 window.setTimeout(function(){
                     $("#project-text")
                     .html(text[keyword])
                     .css("opacity","1");
-                }, 200);
+                }, 350);
             }
         }
 
