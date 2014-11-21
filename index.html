@@ -275,7 +275,7 @@
             
 
             // Activate scroll based animations
-            var w = window.innerHeight, fadedIn = false, projectShowing=1;
+            var w = window.innerHeight, widthAnimated=false; fadedIn = false, projectShowing=1;
             $(window).scroll(function() {
                 var topOfWindow = $(window).scrollTop();
                 
@@ -284,11 +284,12 @@
                     $('.graph1 .top-layer').addClass("inview");
                 }
                 imagePos = $('.g2-cont').offset().top;
-                if (imagePos < topOfWindow+(w*0.7)) {
+                if (!widthAnimated && imagePos < topOfWindow+(w*0.7)) {
                     // $('.graph2 .top-layer').addClass("inview");
                     $('.graph2 .top-layer').animate({
                         width: '100%',
                     }, 3000);
+                    widthAnimated = true;
                 }
 
                 var el = $('#projects-list');
