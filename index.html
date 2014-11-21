@@ -285,7 +285,10 @@
                 }
                 imagePos = $('.g2-cont').offset().top;
                 if (imagePos < topOfWindow+(w*0.7)) {
-                    $('.graph2 .top-layer').addClass("inview");
+                    // $('.graph2 .top-layer').addClass("inview");
+                    $('.graph2 .top-layer').animate({
+                        width: '100%',
+                    }, 3000);
                 }
 
                 var el = $('#projects-list');

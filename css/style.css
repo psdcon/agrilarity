@@ -387,8 +387,6 @@ p {
   background-image: url(../media/images/graph2-2.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
-  -webkit-transition: width 3s ease;
-          transition: width 3s ease;
 }
 /* line 289, style.scss */
 .graph2 .top-layer.inview {
