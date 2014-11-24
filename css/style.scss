@@ -30,7 +30,7 @@ $tabletWidth    : 768px;
 }
 
 body{
-    font-family: Akkurat;
+    font-family: Akkurat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
 }
 p{margin:0;}
@@ -111,7 +111,7 @@ p{margin:0;}
     height: 250px;
     margin-top: 39px;
     overflow: hidden;
-    background: url('../media/images/bg-field-2160.jpg') no-repeat;
+    background: url('../media/images/bg-field-1080.jpg') no-repeat;
     background-position: center top;
     background-size: 125% auto;
     .videoWrapper{ /* Hide video on lower res */
@@ -130,6 +130,7 @@ p{margin:0;}
     @media (min-width: $tabletWidth){
         height: 435px;
         margin-top: 69px;
+        background: url('../media/images/bg-field-2160.jpg') no-repeat;
         background-size: 104% auto;
         .videoWrapper{ /* Show video on lower res */
             display: block;
@@ -143,8 +144,6 @@ p{margin:0;}
     }
 }
 .videoWrapper {
-    background: url('../media/images/bg-field-2160.jpg') no-repeat;
-
     position: relative;
     height: 0;
     padding-top: 25px;
@@ -431,7 +430,7 @@ p{margin:0;}
 
 .bg-tramlines{
     height: 158px;
-    background: url('../media/images/bg-tramlines-2160.jpg') no-repeat;
+    background: url('../media/images/bg-tramlines-1080.jpg') no-repeat;
     background-size: 100% auto;
     background-position: center bottom;
     color: white;
@@ -447,6 +446,7 @@ p{margin:0;}
     }
     @media (min-width: $tabletWidth){
         height: 340px;
+        background: url('../media/images/bg-tramlines-2160.jpg') no-repeat;
         background-position: center center;
         font-size: 27px;
         .row{

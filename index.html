@@ -25,12 +25,12 @@
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
     <!-- My styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -223,8 +223,8 @@
         </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap/js/jquery.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- <script src="bootstrap/js/jquery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
     <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
@@ -275,7 +275,7 @@
             
 
             // Activate scroll based animations
-            var w = window.innerHeight, widthAnimated=false; fadedIn = false, projectShowing=1;
+            var w = window.innerHeight, widthAnimated=false, fadedIn = false, projectShowing=1;
             $(window).scroll(function() {
                 var topOfWindow = $(window).scrollTop();
                 
@@ -344,6 +344,10 @@
                 }, 350);
             }
         }
+
+        window.setTimeout(function(){
+            alert(document.getElementById('videobg').buffered.end(0));
+        }, 2000);
 
     </script>
 </body>
